@@ -2,17 +2,32 @@
 h1{                                 /*Name in Engish*/
     color: rgb(124, 11, 230);
     font-family:Arial, Helvetica, sans-serif ;
-    text-align: center;
-}
-h2 {                                /*Name in Marathi(other language)*/
+    text-align: left;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+
+    ;}
+    h2 {                                /*Name in Marathi(other language)*/
     font-family: 'Noto Sans Devanagari', sans-serif;
-    color: rgb(155, 35, 157);
+    
     font-size: 18px;
     font-style:italic;
-    text-align: center; 
+    text-align: left; 
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
 }
 
-.navBar {                          /*navigation bar for About,Experiance,Highlight*/
+    .circle-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* makes the image circular */
+  box-shadow: 10px 10px 20px  rgb(75, 63, 63); /* shadow around circle */
+  display: block;
+}
+
+
+
+.navBar { 
+    border: 5px solid #fff34f;
+                             /*navigation bar for About,Experiance,Highlight*/
   background-color: rgb(238, 232, 232);
   position: fixed;
   top: 25px;    
@@ -22,12 +37,16 @@ h2 {                                /*Name in Marathi(other language)*/
 img{
     width: 110px;
 }
-
-
+.my_links
+ul {
+display: flex;
+ flex-direction: row; 
+ justify-content: space-evenly;
+}
 
 
 body{                               /*page Margin*/
-    background-color: rgb(204, 232, 235);
+    background:content-box radial-gradient(rgb(243, 207, 212), rgb(206, 227, 236));
      
        margin-top:50px;
        margin-bottom: 80px;
@@ -61,7 +80,8 @@ h5{                            /*Highlight*/
 }
 .experience
 {
- border: 3px solid ;
+ border: 3px solid rgb(61, 12, 61);
     margin-right: 25px;
-    color: rgb(197, 161, 231);
+    display: flex;
+    justify-content: space-evenly;
 }
