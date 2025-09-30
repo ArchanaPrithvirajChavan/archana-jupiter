@@ -17,6 +17,8 @@
    //get footer element by id=fooTer//
 
        const footerElement =document.getElementById("fooTer");
+       
+
 
    //create a variable for date //
 
@@ -56,14 +58,108 @@ for(let i=0;i<skill.length;i++)
     {
          //create list element li for each skill //
 
-          const li = document.createElement('li');
+          const skillsLi = document.createElement('li');
 
          //write each skills on li section //
 
-          li.textContent=((skill[i]));
+          skillsLi.textContent=((skill[i]));
 
          //append li to ul (i.e skillsList”)//
 
-          skillsList.appendChild(li);
+          skillsList.appendChild(skillsLi);
 }
 
+         //get Form Section by id=in_form"//
+      
+         messageForm =document.getElementById('in_form')
+
+
+         //get submit button by id ="button-click"//
+       
+         const button =document.getElementById('button_click')
+
+
+        //get output messege paragraph by id=output_message//
+         const output =document.getElementById('output_message')
+
+        //get message section by id=messages//
+          const messageSection=document.getElementById('messages')
+
+        //get message list section by id =ul //
+          const messageList =messageSection.querySelector("ul")
+
+         //create list element // 
+        const newMessage =document.createElement('li')
+
+        // create Anchor tag // 
+      const a =document.createElement("a") 
+
+         //create a spam //
+      const formSpan= document.createElement("span")
+        
+               //creat a new button removeButton//
+      const removeButton = document.createElement("button");
+
+
+          //append a to li (newMessage)//
+         newMessage.appendChild(a);
+
+          //append span to li//
+         newMessage.appendChild(formSpan);
+         
+          //append li to ul i.e messageList //
+          messageList.appendChild(newMessage);
+      
+          //append button to form//
+          newMessage.appendChild(removeButton);
+
+          
+          //set innerText remove //
+          removeButton.innerText ='Remove';
+
+          //set attribute type button //
+          removeButton.setAttribute("type","button")
+
+          
+          removeButton.style.fontSize = "15px";
+
+            //add evenlistener to removeButton //
+          removeButton.addEventListener('click',(Event)=>{
+              Event.preventDefault();
+
+
+           // create a variable entry that finds the button's parent element //
+           const entry = Event.target.parentNode;
+            entry.remove();
+           })
+        
+           //add eventLicener to messafeForm//
+
+           messageForm.addEventListener('submit',(event)=>
+           {
+          event.preventDefault();
+          messageSection.style.display = 'block';
+          
+          const userName = event.target.elements['userName'].value;
+          const userEmail= event.target.elements['userEmail'].value;
+          const userMessage=event.target.elements['userMessage'].value;
+          output.innerText = `Information Submitted: ${userName}`;
+          
+          console.log(userName);
+          console.log(userEmail);
+          console.log(userMessage);
+          
+         
+         
+         // Display userName and Email on anchor tag  //
+         
+          a.href = `mailto:${userEmail}`;
+          a.textContent = `${userName} (${userEmail})`;
+          formSpan.textContent=userMessage;
+          messageForm.reset();
+
+          
+         })
+         
+          
+    

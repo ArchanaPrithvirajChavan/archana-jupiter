@@ -105,7 +105,7 @@ h3{
 .highlight{
     margin-top: 2%;
     margin-right: 0.2%;
-    margin-bottom: 20%;
+    margin-bottom: 0%;
     
 }
 h5{                            /*Highlight*/
@@ -160,6 +160,31 @@ p{
    li {
        color: black;
    }
+   span{
+    display: block;
+  }
+  #in_form {
+   width:140%;
+   margin-left: 3%;
+  
+}
+
+#info_form{
+  width: 30%;
+  margin-left: 5%;
+  margin-bottom: 0.1%;
+  color: white;
+  background-color: rgb(85, 80, 80);
+}
+#messages{
+  display:none;
+  width: 30%;
+  margin-left: 5%;
+  margin-bottom: 0.1%;
+  color: white;
+
+  background-color: rgb(103, 99, 99);
+}
                       /*media qurey  for tablets and mobile devices */
 
 
@@ -201,8 +226,14 @@ h1
     flex-direction: column;
     gap: 5%;
     }
+#messages {
+    width: 100%;
+    font-size: 14px;
+  }
 
   }
+  
+
                   /*media qurey  for desktops,laptops or monitors devices */
 
     @media (min-width:1275px){
