@@ -32,8 +32,8 @@ h1
     text-align: left; 
     text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
    }
-
-    .circle-img img 
+                          /*Image Styling*/
+    .my-img img 
   {
   width: 10%;
   box-shadow: 10px 10px 20px  rgb(75, 63, 63); /* shadow around circle */
@@ -53,14 +53,14 @@ width: 100%;
 
     
 }
-
-.navBar nav ul        /* Navigation bar displayed as flex (vertically) */
+      /* Navigation bar displayed as flex  */
+.navBar nav ul       
 {
+  display: flex;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex;
-gap:5%
+  gap:5%
    
 }
 
@@ -117,23 +117,22 @@ p{
   margin-right: 10%;
   padding: 1%;
 }
-.experience
+#experience
 {
- 
-  margin-right: 2%;
-  margin-top: 1%;
-  margin-left: 4%;
-  display:grid; 
-  
-                      /* Applyed grid on experience section*/
-  grid-template-columns: 70%  25%;
+     /* Applyed grid on experience section*/
+ display:grid; 
+  grid-template-columns: 60%  25%;
   grid-template-rows: 20%  25%;
-  
-  overflow:auto;
-  gap: 10%;
+  width: 90%;
+  height: 80%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-left: 1%;
+   overflow:hidden;
+  gap: 8%;
   padding: 0.4%;
-  border: 1px solid grey;
-  background-color: rgb(241, 222, 222);
+  border: 3px solid rgb(20, 19, 19);
+  background-color: white;
     
 }
 .job_titles{
@@ -163,28 +162,57 @@ p{
    span{
     display: block;
   }
+       /*Form*/
   #in_form {
-   width:140%;
-   margin-left: 3%;
+   width: 90%;
+  height: 80%;
+  margin-right: 1%;
+  
+  margin-left: 1%;
+   overflow:hidden;
+  gap: 8%;
+  padding: 0.4%;
+  border: 3px solid rgb(20, 19, 19);
+  background-color: white;
   
 }
-
+    /*leave Message section*/
 #info_form{
   width: 30%;
-  margin-left: 5%;
-  margin-bottom: 0.1%;
-  color: white;
-  background-color: rgb(85, 80, 80);
-}
-#messages{
-  display:none;
-  width: 30%;
-  margin-left: 5%;
-  margin-bottom: 0.1%;
-  color: white;
 
-  background-color: rgb(103, 99, 99);
+  
+ 
+  
 }
+      /* output message */
+#Messages{
+  
+  width: 90%;
+  height: 80%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-left: 1%;
+   overflow:hidden;
+  gap: 8%;
+  padding: 0.4%;
+  border: 3px solid rgb(20, 19, 19);
+  background-color: white;
+    
+}
+        /*Form textBox */
+    .form_input{
+      width: 35%;
+    height: 15%;
+    font-size: 90%;
+    padding: 10px;
+    margin-left: 3%;
+  
+    }
+    #button_click
+    {
+       margin-left: 15%;
+       margin-bottom: 2%;
+    }
                       /*media qurey  for tablets and mobile devices */
 
 
@@ -228,7 +256,7 @@ h1
     }
 #messages {
     width: 100%;
-    font-size: 14px;
+    font-size: 3%;
   }
 
   }

@@ -69,9 +69,9 @@ for(let i=0;i<skill.length;i++)
           skillsList.appendChild(skillsLi);
 }
 
-         //get Form Section by id=in_form"//
+         //create messageForm veriable to get form by name//
       
-         messageForm =document.getElementById('in_form')
+        const messageForm=  document.querySelector('form[name="form_name"]')
 
 
          //get submit button by id ="button-click"//
@@ -83,7 +83,7 @@ for(let i=0;i<skill.length;i++)
          const output =document.getElementById('output_message')
 
         //get message section by id=messages//
-          const messageSection=document.getElementById('messages')
+          const messageSection=document.getElementById('Messages')
 
         //get message list section by id =ul //
           const messageList =messageSection.querySelector("ul")
@@ -133,33 +133,49 @@ for(let i=0;i<skill.length;i++)
             entry.remove();
            })
         
-           //add eventLicener to messafeForm//
+           //add eventLicener to messageForm//
 
            messageForm.addEventListener('submit',(event)=>
            {
           event.preventDefault();
           messageSection.style.display = 'block';
+          const userName = event.target.elements['usersName'].value;
+          const userEmail= event.target.elements['usersEmail'].value;
+          const userMessage=event.target.elements['usersMessage'].value;
           
-          const userName = event.target.elements['userName'].value;
-          const userEmail= event.target.elements['userEmail'].value;
-          const userMessage=event.target.elements['userMessage'].value;
           output.innerText = `Information Submitted: ${userName}`;
           
           console.log(userName);
           console.log(userEmail);
           console.log(userMessage);
-          
-         
-         
-         // Display userName and Email on anchor tag  //
+          // Display userName and Email on anchor tag  //
          
           a.href = `mailto:${userEmail}`;
           a.textContent = `${userName} (${userEmail})`;
           formSpan.textContent=userMessage;
           messageForm.reset();
 
-          
+           })
+         
+         const form_text = document.querySelector(".form_text");
+         const editButton = document.getElementById("edit_button")
+         const messageInput = document.querySelector('[name="usersMessage"]');
+         
+
+
+        editButton.addEventListener('click', (event) => {
+
+          event.preventDefault();
+           messageInput.focus();
+  
+    
+ 
          })
+
+         
+          
+          
+         
          
           
     
